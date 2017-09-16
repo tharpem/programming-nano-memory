@@ -1,0 +1,104 @@
+
+.gridRow
+{
+
+}
+
+.bufferLeftCell {
+    float: left;
+    width: 5%;
+    border: "thick";
+    border-color: black;
+    margin: 2px;
+}
+
+.firstCell{
+    float: left;
+    width: 20%;
+    border-style: inset;
+    border-width: thick;
+    border-color: grey;
+    background-color: green;
+    height:45px;
+    margin: 2px;}
+
+.secondCell{
+    float: left;
+    width: 20%;
+    background-color: blue;
+    border-style: inset;
+    border-width: thick;
+    min-height:45px;
+    margin: 2px;
+}
+
+.thirdCell {
+    float: left;
+    width: 20%;
+    background-color: #DDDDDD;
+    border-style: inset;
+    border-width: thick;
+    min-height:45px;
+    margin: 2px;
+
+    ;
+}
+
+.fourthCell{
+    float: left;
+    width: 20%;
+    background-color: yellow;
+    border-style: inset;
+    border-width: thick;
+    min-height:45px;
+    margin: 2px;
+}
+
+.bufferRightCell{
+    float: right;
+    width: 5%;
+    margin: 2px;
+    ;
+}
+
+.clearRight{
+  clear: right;
+  font: white;
+  max-height: 3px;
+  width: "100%";
+  padding: 2px;
+  margin: 0;
+}
+.clearLeft{
+  clear: left;
+  font: white;
+  width: "100%";
+  max-height: 3px;
+  padding: 2px;
+  margin: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.clearfix:before {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+.clearfix {
+    clear: both;
+    display: inline-block;
+      visibility: hidden;
+}

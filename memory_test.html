@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Maji Memory Game</title>
+    <script language="JavaScript" type="text/javascript" src="memory.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="memory.css">
+</head>
+
+
+<body>
+<h1> MAJI'S MEMORY GAME</h1>
+<h2>Select Your Game Theme</h2>
+
+<form>
+    <label>Nature Deck</label>
+    <input type="radio" class="priority" name="priorityN" onclick="getResults"  value="nature_cards" onclick=radioEvent/>
+    <label>Car Deck</label>
+    <input type="radio" class="priority" name="priorityN" onclick="getResults" value="car_cards"  onclick=radioEvent;/>
+    <label>Music Deck</label>
+    <input type="radio" class="priority" name="priorityN" value="music_cards" onclick="pick_card_set;" />
+</form>
+<script>"radioEvent" </script>
+<script>"shuffles" </script>
+<p id=game_start> </p>
+
+<div id="gridContainer">
+<script> "cardsInGrid"</script>
+<div class= "gridRow" id="gridRow1">
+    <div class = "bufferLeftCell">empty</div>
+    <div class = "firstCell"  id = "cell1">Cell 0</div>
+    <div class = "secondCell" id = "cell2">Cell 1</div>
+    <div class = "thirdCell"  id = "cell3">Cell 2</div>
+    <div class = "fourthCell" id = "cell4">Cell 3</div>
+    <div class = "bufferRightCell">empty</div>
+</div>
+<div class = "clearLeft"></div>
+
+<div class= "gridRow" id="gridRow2">
+    <div class = "bufferLeftCell">empty</div>
+    <div class = "firstCell"  id = "cell5">Cell 0</div>
+    <div class = "secondCell" id = "cell6">Cell 1</div>
+    <div class = "thirdCell"  id = "cell7">Cell 2</div>
+    <div class = "fourthCell" id = "cell8">Cell 3</div>
+    <div class = "bufferRightCell">empty</div>
+</div>
+<div class = "clearLeft"></div>
+
+<div class= "gridRow" id="gridRow3">
+    <div class = "bufferLeftCell">empty</div>
+    <div class = "firstCell"  id = "cell9" >Cell 0</div>
+    <div class = "secondCell" id = "cell10">Cell 1</div>
+    <div class = "thirdCell"  id = "cell11">Cell 2</div>
+    <div class = "fourthCell" id = "cell12">Cell 3</div>
+    <div class = "bufferRightCell">empty</div>
+</div>
+<div class = "clearLeft"></div>
+<div class= "gridRow" id="gridRow4">
+    <div class = "bufferLeftCell">empty</div>
+    <div class = "firstCell"  id = "cell13">Cell 0</div>
+    <div class = "secondCell" id = "cell14">Cell 1</div>
+    <div class = "thirdCell"  id = "cell15">Cell 2</div>
+    <div class = "fourthCell" id = "cell16">Cell 3</div>
+    <div class = "rightSpace">empty</div>
+</div>
+</div>
+
+    <p id="tester"></p>
+    <script>
+        document.getElementById("tester").innerHTML = 4;
+        </script>
+    <p> Which card set would you like to use?
+ Select: 
+ "A"  for nature
+
+        "B" for car or
+ "C" for music
+:</p>
+        <p><input type="text" id="card_pick" /></p>
+	  <p><input type="button" id="btnSubmit" value="Card_Selection" /></p>
+     <script>
+
