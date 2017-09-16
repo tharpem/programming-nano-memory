@@ -63,37 +63,38 @@ def pick_card_set(nature_cards, car_cards, music_cards):
 
 
 main_page_head = '''
-<!DOCTYPE html>
-<html lang="en"><head>
+<head>
     <meta charset="utf-8">
     <title>Maji Memory Game</title>
-    <script language="JavaScript" type="text/javascript" src="C:\Users\atharpe\Documents\Python training folder\Memory Game\memory.js" charset="utf-8"></script>
+    <script language="JavaScript" type="text/javascript" src="memory.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">radioEvent(form) </script>
 
     <link rel="stylesheet" href="memory.css">
 </head>
 '''
 
 main_page_content = '''
-
-<body background-color="steelblue">
-<h1> MAJI'S MEMORY GAME</h1>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1><div font=bold> MAJI'S MEMORY GAME</h1>
 <h2>Select Your Game Theme</h2>
 
 <form>
     <label>Nature Deck</label>
-    <input type="radio" class="priority" name="priorityN" onclick="getResults"  value="nature_cards" onclick=radioEvent/>
+    <input type="radio" class="priority" name="priorityN" onclick="getResults();"  value="nature_cards" onclick="radioEvent(this.form);"/>
     <label>Car Deck</label>
     <input type="radio" class="priority" name="priorityN" onclick="getResults" value="car_cards"  onclick=radioEvent;/>
     <label>Music Deck</label>
-    <input type="radio" class="priority" name="priorityN" value="music_cards" onclick="pick_card_set;" />
+    <input type="radio" class="priority" name="priorityN" value="music_cards" onclick=pick_card_set />
 </form>
-<script>"radioEvent" </script>
-<script>"shuffles" </script>
+<script>pick_card_set(nature_cards, car_cards, music_cards)</script>
+<script>shuffles </script>
 <p id=game_start> </p>
 
 <div id="gridContainer">
-<script> "cardsInGrid"</script>
+<script> cardsInGrid(shuffled_card_dic)</script>
 <div class= "gridRow" id="gridRow1">
     <div class = "bufferLeftCell">empty</div>
     <div class = "firstCell"  id = "cell1">Cell 0</div>
@@ -109,7 +110,7 @@ main_page_content = '''
     <div class = "firstCell"  id = "cell5">Cell 0</div>
     <div class = "secondCell" id = "cell6">Cell 1</div>
     <div class = "thirdCell"  id = "cell7">Cell 2</div>
-    <div class = "fourthCell" id = "cell8">Cell 3</div>
+    <div class = "fourthCell" id = "cell8>Cell 3</div>
     <div class = "bufferRightCell">empty</div>
 </div>
 <div class = "clearLeft"></div>
@@ -129,10 +130,13 @@ main_page_content = '''
     <div class = "secondCell" id = "cell14">Cell 1</div>
     <div class = "thirdCell"  id = "cell15">Cell 2</div>
     <div class = "fourthCell" id = "cell16">Cell 3</div>
-    <div class = "rightSpace">empty</div>
+    <div class = "bufferRightCell">empty</div>
 </div>
 </div>
 
+    <p>Here is where grid should be</p>
+    <script> user = input("Welcome, what is your name? ")
+    </script>
     <p id="tester"></p>
     <script>
         document.getElementById("tester").innerHTML = 4;
@@ -143,6 +147,16 @@ main_page_content = '''
 	  <p><input type="button" id="btnSubmit" value="Card_Selection" /></p>
      <script>
 
+<script type="text/javascript">
+  console.log(userPickingCard());
+  </script>
+    <!--<script scr="memory.js"> document.write(grid(4, 4, var new_grid_dic)) </script>
+
+
+    <script var new_grid_dic; grid(4, 4, new_grid_dic)>
+    </script>-->
+  </div>
+</html>
 '''
 
 def open_memory_page():
